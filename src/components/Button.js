@@ -6,7 +6,7 @@ class Button extends React.Component {
     var styles = {};
     styles.borderColor = this.props.borderColor;
     return (
-      <button className='button' style={styles}>
+      <button class="button" onClick={this.props.onClick} style={styles.notification}>
         {this.props.title}
       </button>);
   }
