@@ -1,23 +1,15 @@
+import './Button.scss';
 import React, { Component } from 'react';
-var _ = require('lodash');
-
 
 class Button extends React.Component {
   render() {
-    var styles = _.cloneDeep(this.constructor.styles);
-    styles.notification.backgroundColor = this.props.color;
+    var styles = {};
+    styles.borderColor = this.props.borderColor;
     return (
-      <button style={styles.notification}>
+      <button className='button' style={styles}>
         {this.props.title}
       </button>);
   }
 }
-Button.styles = {
-  notification: {
-    border: "5px solid green",
-    padding: 10,
-    color: "#333"
-  }
-};
 
 export default Button;

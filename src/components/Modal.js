@@ -7,7 +7,7 @@ export default class extends React.Component {
 
   render() {
     return(
-      <div class="hidden">
+      <div className="hidden">
         <h1>{this.props.title}</h1>
         {this.props.children}
       </div>
