@@ -7,6 +7,9 @@ export default class App extends React.Component {
   constructor() {
     super();
   }
+  openModal(){
+    this._modal.toggle();
+  }
 
   render() {
     return(
@@ -15,7 +18,8 @@ export default class App extends React.Component {
         <h2>Button</h2>
         <Button title="Button" borderColor="red" />
         <h2>Modal</h2>
-        <Modal title="Modal Title">
+        <Button onClick={this.openModal.bind(this)} title="Toggle Modal"/>
+        <Modal title="Modal Title" ref={(c) => this._modal = c}>
           Modal Content
         </Modal>
       </div>
