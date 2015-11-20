@@ -1,3 +1,4 @@
+import './App.scss';
 import React, { Component } from 'react';
 import Button from './Button';
 import Modal from './Modal';

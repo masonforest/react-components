@@ -27,6 +27,9 @@ module.exports = {
       loader: 'style!css!sass'
     }]
   },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./node_modules")]
+  },
   node: {
     fs: "empty"
   }
