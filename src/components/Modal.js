@@ -8,13 +8,17 @@ class Modal extends React.Component {
     this.state = { open: false  };
   }
 
+  close(){
+    this.setState({"open": false});
+  }
+
   toggle(){
-		this.state.open = !this.state.open;
-    this.setState(this.state);
+    this.setState({"open": !this.state.open});
   }
   render() {
     return (
       <div className={this.state.open ? '' : 'hidden'}>
+        <div onClick={this.close.bind(this)}>X</div>
         <h1>{this.props.title}</h1>
         <div>{this.props.children}</div>
       </div>
